@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchGPT</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🔬 ResearchGPT
+        </div>
+
+        <div class="nav-links">
+
+            <button class="theme-btn">
+                🌙
+            </button>
+
+            <a href="#">GitHub</a>
+
+            <a href="#">About</a>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+         <h1>AI Powered Research Platform</h1>
+
+    <p class="hero-description">
+
+        Search, analyze and generate professional research
+        reports using multiple AI agents.
+
+    </p>
+
+    <div class="hero-search">
+
+        <input
+            type="text"
+            id="query"
+            placeholder="Ask anything... e.g. Compare LangGraph and CrewAI"
+        >
+
+        <button id="research-btn">
+
+            🔍 Start Research
+
+        </button>
+
+    </div>
+
+    <p class="hero-subtitle">
+
+        Powered by Multi-Agent AI • Web Search • FastAPI
+
+    </p>
+
+    </section>
+
+    
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar card">
+
+            <div class="agent-section">
+
+                <h2>Agent Activity</h2>
+
+                <ul>
+
+                    <li id="planner">
+
+                        <span class="status waiting"></span>
+
+                        Planner
+
+                    </li>
+
+                    <li id="search">
+
+                        <span class="status waiting"></span>
+
+                        Search Agent
+
+                    </li>
+
+                    <li id="research">
+
+                        <span class="status waiting"></span>
+
+                        Research Agent
+
+                    </li>
+
+                    <li id="writer">
+
+                        <span class="status waiting"></span>
+
+                        Writer Agent
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="sources-section">
+
+                <h2>Sources</h2>
+
+                <div id="sources-output">
+
+                    <p class="empty-state">
+
+                        No sources available.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= REPORT ================= -->
+
+        <section class="report card">
+
+            <h2>Research Report</h2>
+
+            <div id="report-output">
+
+                <div class="placeholder">
+
+                    <h3>
+
+                        Ready to Research
+
+                    </h3>
+
+                    <p>
+
+                        Enter a research topic above and click
+
+                        <strong>Start Research</strong>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+
+    
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        Powered by FastAPI • LangGraph • Groq
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
