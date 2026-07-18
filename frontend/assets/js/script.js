@@ -5,6 +5,7 @@
 const queryInput = document.getElementById("query");
 const researchButton = document.getElementById("research-btn");
 const reportOutput = document.getElementById("report-output");
+const themeToggle = document.getElementById("theme-toggle");
 
 // Agent Status Elements
 const agentElements = {
@@ -13,6 +14,66 @@ const agentElements = {
     "Research Agent": document.getElementById("research"),
     "Writer": document.getElementById("writer")
 };
+
+// Theme
+
+function setTheme(theme) {
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        theme
+    );
+
+    localStorage.setItem(
+        "theme",
+        theme
+    );
+
+    themeToggle.textContent =
+        theme === "dark" ? "🌙" : "☀️";
+
+}
+
+
+//Toggle Between Themes
+
+function toggleTheme() {
+
+    const currentTheme =
+        document.documentElement.getAttribute("data-theme");
+
+    const newTheme =
+        currentTheme === "dark"
+            ? "light"
+            : "dark";
+
+    setTheme(newTheme);
+
+}
+
+//Load the theme
+function loadTheme() {
+
+    const savedTheme =
+        localStorage.getItem("theme");
+
+    if (savedTheme) {
+
+        setTheme(savedTheme);
+
+    } else {
+
+        setTheme("dark");
+
+    }
+
+}
+
+
+
+
+
+
 
 // ======================================================
 // CONFIGURATION
@@ -220,3 +281,10 @@ queryInput.addEventListener(
 
     }
 );
+
+
+themeToggle.addEventListener(
+    "click",
+    toggleTheme
+);
+loadTheme()

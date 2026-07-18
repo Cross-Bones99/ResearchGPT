@@ -2,25 +2,51 @@
 
 /* ================= ROOT ================= */
 
-:root {
+:root[data-theme="dark"]{
 
-    --background: #0f172a;
+    --background:#0f172a;
+    --surface:#1e293b;
 
-    --surface: #1e293b;
+    --primary:#3b82f6;
 
-    --surface-hover: #334155;
+    --text:#f8fafc;
+    --text-secondary:#94a3b8;
 
-    --primary: #3b82f6;
+    --border:#334155;
 
-    --primary-hover: #2563eb;
+    --hover:#334155;
 
-    --text: #f8fafc;
+    --input:#162033;
 
-    --muted: #94a3b8;
-
-    --border: #334155;
+    --shadow:0 10px 30px rgba(0,0,0,.25);
 
 }
+
+
+
+:root[data-theme="light"]{
+
+    --background:#f8fafc;
+    --surface:#ffffff;
+
+    --primary:#2563eb;
+
+    --text:#0f172a;
+    --text-secondary:#475569;
+
+    --border:#e2e8f0;
+
+    --hover:#f1f5f9;
+
+    --input:#ffffff;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+
 
 /* ================= GLOBAL ================= */
 
@@ -109,6 +135,48 @@ body {
     border-radius: 10px;
 
     cursor: pointer;
+
+}
+
+
+.github-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+
+.github-link:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+.github-link i{
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.github-link:hover i{
+
+    transform:rotate(-10deg) scale(1.15);
 
 }
 
